@@ -26,13 +26,16 @@ export default class Mapapp extends Component {
   }
 
   componentWillMount(){
-    Aniamted.timing()
+    Animated.timing(this. state.animate, {
+      toValue: 100,
+      duraction: 1000
+    }).start()
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Animated.Text>
+        <Animated.Text style ={{width: this.state.animate, height: this.state.animate}}>
           This is an animated text
         </Animated.Text>
       </View>
@@ -46,7 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF'
-  },
+  }
 });
 
 AppRegistry.registerComponent('Mapapp', () => Mapapp);
