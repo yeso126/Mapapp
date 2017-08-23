@@ -41,15 +41,16 @@ export default class Mapapp extends Component {
     return (
       <View style={styles.container}>
 
-        <Animated.View style ={{
-          borderRadius: 1000,
-          backgroundColor: ' rgb(175, 213, 171) ',
+        <Animated.View style ={[{
           width: this.state.animate,
           height: this.state.animate,
-        }}
+        }, styles.animatedView]}
         />
 
-        <Animated.Text style ={styles.animatedText}
+        <Animated.Text style ={[{
+          top:this.state.animateXY.y,
+          left: this.state.animateXY.x},
+          styles.animatedText]}
           >
             Tap here to start
         </Animated.Text>
@@ -66,9 +67,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  animatedText:{
+  animatedView: {
+    borderRadius: 1000,
+    backgroundColor: ' rgb(175, 213, 171) ',
+  },
+  animatedText: {
     position:'absolute',
-    top:{this.state.animateXY.y},
-    left:{this.state.animateXY.x}}
+    fontSize: 20
   }
 });
