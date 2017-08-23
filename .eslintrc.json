@@ -23,7 +23,6 @@
       "no-console": "off",
       "no-dupe-class-members": "error",
       "no-this-before-super": "error",
-      "no-unused-vars": ["error", {"args": "none"}],
       "no-var": "warn",
       "prefer-spread": "warn",
       "prefer-template": "warn",
