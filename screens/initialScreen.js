@@ -20,6 +20,7 @@ const navigateAction = NavigationActions.navigate({
 export default class Mapapp extends Component {
     static navigationOptions = {
       title: 'JS powered Native Game',
+      headerTintColor: 'rgb(231, 142, 24)',
     };
     constructor(){
       super();
@@ -34,18 +35,21 @@ export default class Mapapp extends Component {
 
 
     componentWillMount(){
+      this.state.animate.resetAnimation();
+      this.state.animateXY.resetAnimation();
       Animated.parallel([
-        Animated.timing(this. state.animateXY, {
+        Animated.timing(this.state.animateXY, {
           toValue: {x: width /2 -75, y: height /2 -55},
-          duraction: 1000,
+          duration: 1000,
         }),
-        Animated.timing(this. state.animate, {
+        Animated.timing(this.state.animate, {
           toValue: 250,
-          duraction: 1000,
+          duration: 1000,
         }),
       ]).start();
 
     }
+
 
     onPressButton = () =>{
       this.props.navigation.dispatch(navigateAction);
@@ -59,7 +63,7 @@ export default class Mapapp extends Component {
           <TouchableNativeFeedback
             onPress={this.onPressButton}
             delayPressIn={1}
-            background={TouchableNativeFeedback.Ripple('#F5FCFF')}
+            background={TouchableNativeFeedback.Ripple('#002637')}
           >
 
             <Animated.View style ={[{
@@ -90,14 +94,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#002637',
   },
   animatedView: {
     borderRadius: 1000,
     backgroundColor: ' rgb(175, 213, 171) ',
   },
   animatedText: {
-    position:'absolute',
+    position: 'absolute',
     fontSize: 20,
   },
 });
