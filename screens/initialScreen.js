@@ -65,15 +65,11 @@ export default class Mapapp extends Component {
             delayPressIn={1}
             background={TouchableNativeFeedback.Ripple('#002637')}
           >
-
             <Animated.View style ={[{
               width: this.state.animate,
               height: this.state.animate,
             }, styles.animatedView]}
             />
-
-
-
           </TouchableNativeFeedback>
 
           <Animated.Text style ={[{
