@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
+import Button from '../components/button';
 
 const {width, height} = Dimensions.get('window');
 
@@ -77,8 +78,15 @@ export default class Mapapp extends Component {
             left: this.state.animateXY.x},
           styles.animatedText]}
           >
-            Tap here to start
+            Logo
           </Animated.Text>
+
+          <View style ={styles.buttonContainer}>
+            <Button title= "Easy"/>
+            <Button title= "Medium"/>
+            <Button title= "Hard"/>
+          </View>
+
 
         </View>
       );
@@ -88,7 +96,7 @@ export default class Mapapp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#002637',
   },
@@ -100,4 +108,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     fontSize: 20,
   },
+  buttonContainer: {
+    flexDirection: 'row',
+    padding: 5,
+    margin: 5,
+    justifyContent: 'space-between',
+  },
 });
+
+Mapapp.propTypes = {
+  navigation: React.PropTypes.object,
+};
