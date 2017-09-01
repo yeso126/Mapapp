@@ -11,9 +11,9 @@ import { NavigationActions } from 'react-navigation';
 // const {width, height} = Dimensions.get('window');
 
 const navigateAction = NavigationActions.navigate({
-  routeName: 'Game',
+  routeName: 'Easy',
   params: {},
-  action: NavigationActions.navigate({ routeName: 'Game'}),
+  action: NavigationActions.navigate({ routeName: 'Easy'}),
 });
 
 export default class Button extends Component {
@@ -27,7 +27,7 @@ export default class Button extends Component {
 
   componentWillMount(){
     Animated.timing(this.state.grow, {
-      toValue: 100,
+      toValue: 80,
       duration: 1000,
     }).start();
   }
@@ -63,12 +63,13 @@ export default class Button extends Component {
 
 const styles = StyleSheet.create({
   animatedView: {
-    borderRadius: 1000,
+    borderRadius: 20,
     backgroundColor: ' rgb(175, 213, 171) ',
   },
 });
 
 Button.propTypes = {
   title: React.PropTypes.string,
+  route: React.PropTypes.string,
   navigation: React.PropTypes.object,
 };

@@ -9,7 +9,7 @@ import Ball from '../components/ball';
 
 export default class Game extends Component {
   static navigationOptions = {
-    title: 'Prepare to die',
+    title: 'Hard',
     headerTintColor: 'rgb(231, 142, 24)',
   };
 
@@ -17,7 +17,9 @@ export default class Game extends Component {
   render() {
     return (
       <View style= {styles.container}>
-        <Ball/>
+        <Ball color="blue"/>
+        <Ball color="red"/>
+        <Ball color="green"/>
       </View>
     );
   }
@@ -26,5 +28,6 @@ export default class Game extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
   },
 });

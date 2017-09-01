@@ -13,8 +13,8 @@ import {
 const {width, height} = Dimensions.get('window');
 
 export default class Game extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       animateXY: new Animated.ValueXY({
         x: Math.floor((Math.random() * width) + 1),
@@ -35,7 +35,9 @@ export default class Game extends Component {
       y:0});
 
     Animated.timing(this.state.animateXY, {
-      toValue: {x: Math.floor((Math.random() * width) + 1), y: 1000},
+      toValue: {
+        x: Math.floor((Math.random() * width) + 1),
+        y: height},
       duration: 1200,
       useNativeDriver: true,
     }).start((animation) => {
@@ -57,6 +59,7 @@ export default class Game extends Component {
           <Animated.View style={[styles.balls,{
             translateY: this.state.animateXY.y,
             translateX: this.state.animateXY.x,
+            backgroundColor: this.props.color,
           }]}
           />
         </TouchableWithoutFeedback>
@@ -71,7 +74,7 @@ const styles = StyleSheet.create({
   },
   balls: {
     borderRadius: 1000,
-    backgroundColor: ' rgb(175, 213, 171) ',
+    // backgroundColor: ' rgb(175, 213, 171) ',
     width: 90,
     height: 90,
   },

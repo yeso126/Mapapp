@@ -2,58 +2,47 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  Animated,
-  Dimensions,
-  TouchableNativeFeedback,
+  Button,
 } from 'react-native';
+
+import Logo from '../components/logo';
+
 import { NavigationActions } from 'react-navigation';
 
-import Button from '../components/button';
-
-const {width, height} = Dimensions.get('window');
-
-const navigateAction = NavigationActions.navigate({
-  routeName: 'Game',
+const goToEasy = new NavigationActions.navigate({
+  routeName: 'Easy',
   params: {},
-  action: NavigationActions.navigate({ routeName: 'Game'}),
+  action: NavigationActions.navigate({ routeName: 'Easy'}),
 });
 
-export default class Mapapp extends Component {
+const goToMedium = new NavigationActions.navigate({
+  routeName: 'Medium',
+  params: {},
+  action: NavigationActions.navigate({ routeName: 'Medium'}),
+});
+
+const goToHard = new NavigationActions.navigate({
+  routeName: 'Hard',
+  params: {},
+  action: NavigationActions.navigate({ routeName: 'Hard'}),
+});
+
+
+export default class InitialScreen extends Component {
     static navigationOptions = {
       title: 'JS powered Native Game',
-      headerTintColor: 'rgb(231, 142, 24)',
+      headerTintColor: '#e78e18',
     };
-    constructor(){
-      super();
-      this.state = {
-        animateXY: new Animated.ValueXY({
-          x: width /2-75,
-          y:0,
-        }),
-        animate: new Animated.Value(1),
-      };
+
+
+    goToEasy = () =>{
+      this.props.navigation.dispatch(goToEasy);
     }
-
-
-    componentWillMount(){
-      this.state.animate.resetAnimation();
-      this.state.animateXY.resetAnimation();
-      Animated.parallel([
-        Animated.timing(this.state.animateXY, {
-          toValue: {x: width /2 -75, y: height /2 -55},
-          duration: 1000,
-        }),
-        Animated.timing(this.state.animate, {
-          toValue: 250,
-          duration: 1000,
-        }),
-      ]).start();
-
+    goToMedium = () =>{
+      this.props.navigation.dispatch(goToMedium);
     }
-
-
-    onPressButton = () =>{
-      this.props.navigation.dispatch(navigateAction);
+    goToHard = () =>{
+      this.props.navigation.dispatch(goToHard);
     }
 
 
@@ -61,32 +50,20 @@ export default class Mapapp extends Component {
       return (
         <View style={styles.container}>
 
-          <TouchableNativeFeedback
-            onPress={this.onPressButton}
-            delayPressIn={1}
-            background={TouchableNativeFeedback.Ripple('#002637')}
-          >
-            <Animated.View style ={[{
-              width: this.state.animate,
-              height: this.state.animate,
-            }, styles.animatedView]}
+          <Logo style={styles.logo}/>
+          <View style={styles.buttonContainer}>
+
+            <Button title="easy"
+              onPress={this.goToEasy}
             />
-          </TouchableNativeFeedback>
+            <Button title="Medium"
+              onPress={this.goToMedium}
+            />
+            <Button title="Hard"
+              onPress={this.goToHard}
+            />
 
-          <Animated.Text style ={[{
-            top:this.state.animateXY.y,
-            left: this.state.animateXY.x},
-          styles.animatedText]}
-          >
-            Logo
-          </Animated.Text>
-
-          <View style ={styles.buttonContainer}>
-            <Button title= "Easy"/>
-            <Button title= "Medium"/>
-            <Button title= "Hard"/>
           </View>
-
 
         </View>
       );
@@ -95,27 +72,22 @@ export default class Mapapp extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#002637',
   },
-  animatedView: {
-    borderRadius: 1000,
-    backgroundColor: ' rgb(175, 213, 171) ',
-  },
-  animatedText: {
-    position: 'absolute',
-    fontSize: 20,
-  },
+
   buttonContainer: {
+    alignSelf: 'stretch',
     flexDirection: 'row',
-    padding: 5,
-    margin: 5,
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+  },
+  logo:{
+    alignSelf: 'center',
   },
 });
 
-Mapapp.propTypes = {
+InitialScreen.propTypes = {
   navigation: React.PropTypes.object,
 };

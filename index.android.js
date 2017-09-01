@@ -4,12 +4,15 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import InitialScreen from './screens/initialScreen';
-import Game from './screens/gameScreen';
-
+import Easy from './screens/easy';
+import Medium from './screens/medium';
+import Hard from './screens/hard';
 
 const Mapapp = StackNavigator({
-  Home: { screen: InitialScreen },
-  Game: { screen: Game},
+  Home:   { screen: InitialScreen },
+  Easy:   { screen: Easy},
+  Medium: { screen: Medium},
+  Hard:   { screen: Hard},
 
 });
 
