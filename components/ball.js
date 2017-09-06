@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, { Component } from 'react';
 import {
   View,
@@ -10,7 +12,7 @@ import {
 
 const {width, height} = Dimensions.get('window');
 
-export default class Ball extends Component {
+export default class Game extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -24,32 +26,17 @@ export default class Ball extends Component {
 
   componentWillMount () {
     this.fall();
-    // this.state.animateXY.addListener((currentValue) => {
-    //   if (currentValue.x > width-40)  {
-    //     Animated.timing(this.state.animateXY, {
-    //       toValue:{
-    //         x: currentValue.x - 600,
-    //         y: height,
-    //       },
-    //       duration: 200,
-    //     }).start();
-    //     console.log('out of the screen');
-    //   }
-    // });
   }
 
 
   fall = () => {
-    let random =  Math.floor((Math.random() * width) + 1);
-
     this.state.animateXY.setValue({
-      x: random,
-      // x: Animated.diffClamp(random + 20, 0 , width ),
+      x: Math.floor((Math.random() * width) + 1 ),
       y:0});
 
     Animated.timing(this.state.animateXY, {
       toValue: {
-        x: random,
+        x: Math.floor((Math.random() * width) + 1),
         y: height},
       duration: 1200,
       useNativeDriver: true,
@@ -59,7 +46,6 @@ export default class Ball extends Component {
       }
     });
   }
-
 
   _onPressButton (){
     Alert.alert('Alert');
@@ -93,12 +79,9 @@ const styles = StyleSheet.create({
   },
   balls: {
     borderRadius: 1000,
+    // backgroundColor: ' rgb(175, 213, 171) ',
     width: 90,
     height: 90,
   },
 
 });
-
-Ball.propTypes = {
-  color: React.PropTypes.string,
-};

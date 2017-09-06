@@ -1,6 +1,8 @@
-import { AppRegistry } from 'react-native';
+import React from 'react';
+import {
+  AppRegistry,
+} from 'react-native';
 import { StackNavigator } from 'react-navigation';
-
 import InitialScreen from './screens/initialScreen';
 import Easy from './screens/easy';
 import Medium from './screens/medium';
