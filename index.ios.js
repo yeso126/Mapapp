@@ -1,53 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import { AppRegistry } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import InitialScreen from './screens/initialScreen';
+import Easy from './screens/easy';
+import Medium from './screens/medium';
+import Hard from './screens/hard';
 
-export default class Mapapp extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+const Mapapp = StackNavigator({
+  Home:   { screen: InitialScreen },
+  Easy:   { screen: Easy},
+  Medium: { screen: Medium},
+  Hard:   { screen: Hard},
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
 });
+
 
 AppRegistry.registerComponent('Mapapp', () => Mapapp);
