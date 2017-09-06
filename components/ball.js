@@ -53,12 +53,17 @@ export default class Game extends Component {
 
 
   render() {
+    const transX = Animated.diffClamp(this.state.animateXY.x, 0, 80)
+      .interpolate({
+        inputRange: [0, 1],
+        outputRange: [1, -1],
+      });
     return (
       <View style= {styles.container}>
         <TouchableWithoutFeedback onPress={this._onPressButton}>
           <Animated.View style={[styles.balls,{
             translateY: this.state.animateXY.y,
-            translateX: this.state.animateXY.x,
+            translateX: transX,
             backgroundColor: this.props.color,
           }]}
           />
