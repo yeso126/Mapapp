@@ -12,15 +12,15 @@ import {
 
 const {width, height} = Dimensions.get('window');
 
-export default class Game extends Component {
+export default class Ball extends Component {
   constructor(props){
     super(props);
     this.state = {
       animateXY: new Animated.ValueXY({
-        x: Math.floor((Math.random() * width) + 1),
+        x: 0,
         y:0,
       }),
-      reset: false,
+      pressed: false,
     };
   }
 
@@ -31,12 +31,13 @@ export default class Game extends Component {
 
   fall = () => {
     this.state.animateXY.setValue({
-      x: Math.floor((Math.random() * width) + 1 ),
-      y:0});
+      x: Math.floor((Math.random() * width) + 1) ,
+      y:0,
+    });
 
     Animated.timing(this.state.animateXY, {
       toValue: {
-        x: Math.floor((Math.random() * width) + 1),
+        x: Math.floor((Math.random() * width) + 1) ,
         y: height},
       duration: 1200,
       useNativeDriver: true,
@@ -47,24 +48,27 @@ export default class Game extends Component {
     });
   }
 
-  _onPressButton (){
-    Alert.alert('Alert');
+  onPressButton () {
+    this.setState({
+      pressed: true,
+    });
   }
 
 
   render() {
-    const transX = Animated.diffClamp(this.state.animateXY.x, 0, 80)
-      .interpolate({
-        inputRange: [0, 1],
-        outputRange: [1, -1],
-      });
+    // const transX = Animated.diffClamp(this.state.animateXY.x, 0, 80)
+    //   .interpolate({
+    //     inputRange: [0, 1],
+    //     outputRange: [1, -1],
+    //   });
     return (
       <View style= {styles.container}>
-        <TouchableWithoutFeedback onPress={this._onPressButton}>
+        <TouchableWithoutFeedback onPress={this.onPressButton.bind(this)}>
           <Animated.View style={[styles.balls,{
             translateY: this.state.animateXY.y,
-            translateX: transX,
+            translateX: this.state.animateXY.x,
             backgroundColor: this.props.color,
+            borderColor: this.state.pressed ? 'black' : this.props.color,
           }]}
           />
         </TouchableWithoutFeedback>
@@ -80,8 +84,14 @@ const styles = StyleSheet.create({
   balls: {
     borderRadius: 1000,
     // backgroundColor: ' rgb(175, 213, 171) ',
-    width: 90,
-    height: 90,
+    borderStyle: 'solid',
+    borderWidth: 10,
+    width: 70,
+    height: 70,
   },
 
 });
+
+Ball.propTypes = {
+  color: React.PropTypes.string,
+};

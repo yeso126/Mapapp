@@ -17,9 +17,16 @@ export default class Game extends Component {
   render() {
     return (
       <View style= {styles.container}>
+
         <Ball color="blue"/>
+        <Ball color="magenta"/>
+        <Ball color="green"/>
+        <Ball color="red"/>
+        <Ball color="magenta"/>
         <Ball color="red"/>
         <Ball color="green"/>
+        <Ball color="purple"/>
+        <Ball color="magenta"/>
       </View>
     );
   }

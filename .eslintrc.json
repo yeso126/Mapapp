@@ -17,7 +17,6 @@
       "constructor-super": "error",
       "indent": ["error", 2, {"SwitchCase": 1}],
       "jsx-quotes": "warn",
-      "linebreak-style": ["error", "unix"],
       "no-class-assign": "error",
       "no-const-assign": "error",
       "no-console": "off",
