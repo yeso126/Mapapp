@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { Component } from 'react';
 import {
   View,
@@ -7,8 +5,8 @@ import {
   Animated,
   Dimensions,
   TouchableWithoutFeedback,
-  Alert,
 } from 'react-native';
+
 
 const {width, height} = Dimensions.get('window');
 
@@ -83,7 +81,6 @@ const styles = StyleSheet.create({
   },
   balls: {
     borderRadius: 1000,
-    // backgroundColor: ' rgb(175, 213, 171) ',
     borderStyle: 'solid',
     borderWidth: 10,
     width: 70,

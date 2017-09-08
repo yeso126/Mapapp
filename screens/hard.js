@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import Ball from '../components/ball';
-
+import Timer from '../components/timer';
 
 export default class Game extends Component {
   static navigationOptions = {
@@ -17,7 +17,7 @@ export default class Game extends Component {
   render() {
     return (
       <View style= {styles.container}>
-
+        <Timer start={Date.now()} />
         <Ball color="blue"/>
         <Ball color="magenta"/>
         <Ball color="green"/>
