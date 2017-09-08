@@ -11,12 +11,13 @@ export default class Timer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      elapsed: 0,
+      elapsed: 20,
     };
   }
 
   componentDidMount(){
-    this.timer = setInterval(this.tick.bind(this) , 50);
+    this.timer = setInterval(this.tick.bind(this) , 1000);
+    // Ticks every seconds set to 1000
   }
 
   componentWillUnmount(){
@@ -26,23 +27,24 @@ export default class Timer extends Component {
   }
 
   tick(){
-    this.setState({elapsed: new Date() - this.props.start});
+    this.setState(prevState => ({
+      elapsed: prevState.elapsed - 1,
+    }));
+    // Ticks counting down
+    if (this.state.elapsed == 0) {
+      clearInterval(this.timer);
+    }
+    // When timer reaches 0
   }
 
   render() {
-    // Calculate elapsed to tenth of a second:
-    let elapsed = Math.round(this.state.elapsed / 100);
-
-    // This will give a number with one digit after the decimal dot (xx.x):
-    let seconds = (elapsed / 10).toFixed(1);
+    // let seconds = Math.round(this.state.elapsed / 100);
+    let seconds = this.state.elapsed;
 
     return (
       <View style={styles.container}>
-        <Text>
+        <Text style={styles.text}>
           {seconds}
-        </Text>
-        <Text>
-          {elapsed}
         </Text>
       </View>
     );
@@ -53,8 +55,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  text: {
+    fontSize: 20,
+    color: 'red',
+  },
 });
 
 Timer.propTypes = {
-  start: React.PropTypes.object,
+  start: React.PropTypes.number,
 };

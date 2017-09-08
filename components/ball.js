@@ -43,6 +43,7 @@ export default class Ball extends Component {
       if (animation.finished) {
         this.fall();
       }
+      // Loops animation
     });
   }
 
