@@ -15,11 +15,6 @@ const goToEasy = new NavigationActions.navigate({
   action: NavigationActions.navigate({ routeName: 'Easy'}),
 });
 
-const goToMedium = new NavigationActions.navigate({
-  routeName: 'Medium',
-  params: {},
-  action: NavigationActions.navigate({ routeName: 'Medium'}),
-});
 
 const goToHard = new NavigationActions.navigate({
   routeName: 'Hard',
@@ -38,9 +33,6 @@ export default class InitialScreen extends Component {
     goToEasy = () =>{
       this.props.navigation.dispatch(goToEasy);
     }
-    goToMedium = () =>{
-      this.props.navigation.dispatch(goToMedium);
-    }
     goToHard = () =>{
       this.props.navigation.dispatch(goToHard);
     }
@@ -55,9 +47,6 @@ export default class InitialScreen extends Component {
 
             <Button title="easy"
               onPress={this.goToEasy}
-            />
-            <Button title="Medium"
-              onPress={this.goToMedium}
             />
             <Button title="Hard"
               onPress={this.goToHard}

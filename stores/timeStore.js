@@ -17,7 +17,7 @@ export default class time {
     }
     // When timer reaches 0
   }
-  clearInterval(){
+  resetInterval(){
     this.countDown = 20;
     clearInterval(this.timer);
   }

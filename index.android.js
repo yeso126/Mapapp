@@ -9,13 +9,11 @@ import store from './stores/index';
 import InitialScreen from './screens/initialScreen';
 
 import Easy from './screens/easy';
-import Medium from './screens/medium';
 import Hard from './screens/hard';
 
 const Routes = StackNavigator({
   Home:   { screen: InitialScreen },
   Easy:   { screen: Easy},
-  Medium: { screen: Medium},
   Hard:   { screen: Hard},
 });
 

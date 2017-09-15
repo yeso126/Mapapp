@@ -4,9 +4,13 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
+import { observer, inject } from 'mobx-react';
+
 import Ball from '../components/ball';
 import Timer from '../components/timer';
 
+@inject('timeStore')
+@observer
 export default class Game extends Component {
   static navigationOptions = {
     title: 'Hard',
@@ -15,8 +19,12 @@ export default class Game extends Component {
 
 
   render() {
+
     return (
-      <View style= {styles.container}>
+      <View style= {[styles.container, {
+        backgroundColor: this.props.timeStore.countDown < 5 ? '#c13434' : '#baffbb',
+      }]}
+      >
         <Timer start={Date.now()} />
         <Ball color="blue"/>
         <Ball color="magenta"/>
@@ -38,3 +46,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
+
+Game.propTypes = {
+  countDown: React.PropTypes.number,
+  timeStore: React.PropTypes.object,
+};

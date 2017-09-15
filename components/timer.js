@@ -18,7 +18,7 @@ export default class Timer extends Component {
   }
 
   componentWillUnmount(){
-    this.props.timeStore.clearInterval();
+    this.props.timeStore.resetInterval();
   }
 
   render() {
