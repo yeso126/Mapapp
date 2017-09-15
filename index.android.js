@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Provider } from 'mobx-react';
-import stores from './stores/index';
+import store from './stores/index';
 
 import InitialScreen from './screens/initialScreen';
 
@@ -22,7 +22,7 @@ const Routes = StackNavigator({
 export default class Mapapp extends Component {
   render() {
     return (
-      <Provider {...stores}>
+      <Provider {...store}>
         <Routes/>
       </Provider>
     );

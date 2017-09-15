@@ -1,7 +1,7 @@
-import time from './time';
+import timeStore from './time';
 
 const stores = {
-  time,
+  timeStore: new timeStore(),
 };
 
-export default stores; 
+export default stores;

@@ -7,6 +7,10 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import { observer, inject } from 'mobx-react';
+
+@inject('timeStore')
+@observer
 export default class Timer extends Component {
   constructor(props){
     super(props);
@@ -39,7 +43,7 @@ export default class Timer extends Component {
 
   render() {
     // let seconds = Math.round(this.state.elapsed / 100);
-    let seconds = this.state.elapsed;
+    let seconds = this.props.timeStore.time.countDown;
 
     return (
       <View style={styles.container}>
@@ -63,4 +67,6 @@ const styles = StyleSheet.create({
 
 Timer.propTypes = {
   start: React.PropTypes.number,
+  countDown: React.PropTypes.number,
+  timeStore: React.PropTypes.object,
 };
