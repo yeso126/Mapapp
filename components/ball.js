@@ -6,10 +6,12 @@ import {
   Dimensions,
   TouchableWithoutFeedback,
 } from 'react-native';
-
+import { observer, inject } from 'mobx-react';
 
 const {width, height} = Dimensions.get('window');
 
+@inject('timeStore')
+@observer
 export default class Ball extends Component {
   constructor(props){
     super(props);
@@ -41,9 +43,13 @@ export default class Ball extends Component {
       useNativeDriver: true,
     }).start((animation) => {
       if (animation.finished) {
-        this.fall();
+        this.fall();        // Loops animation
       }
-      // Loops animation
+      if (this.props.timeStore.countDown == 0) {
+        this.state.animateXY.stopAnimation;  // Stops animation
+        console.log('reached 0 ');
+      }
+
     });
   }
 
@@ -55,11 +61,6 @@ export default class Ball extends Component {
 
 
   render() {
-    // const transX = Animated.diffClamp(this.state.animateXY.x, 0, 80)
-    //   .interpolate({
-    //     inputRange: [0, 1],
-    //     outputRange: [1, -1],
-    //   });
     return (
       <View style= {styles.container}>
         <TouchableWithoutFeedback onPress={this.onPressButton.bind(this)}>
@@ -92,4 +93,6 @@ const styles = StyleSheet.create({
 
 Ball.propTypes = {
   color: React.PropTypes.string,
+  countDown: React.PropTypes.number,
+  timeStore: React.PropTypes.object,
 };

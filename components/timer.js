@@ -12,38 +12,17 @@ import { observer, inject } from 'mobx-react';
 @inject('timeStore')
 @observer
 export default class Timer extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      elapsed: 20,
-    };
-  }
 
   componentDidMount(){
-    this.timer = setInterval(this.tick.bind(this) , 1000);
-    // Ticks every seconds set to 1000
+    this.props.timeStore.timeInterval();
   }
 
   componentWillUnmount(){
-    // Este metodo limpia el intervalo cada vez que se
-    // quita el componente
-    clearInterval(this.timer);
-  }
-
-  tick(){
-    this.setState(prevState => ({
-      elapsed: prevState.elapsed - 1,
-    }));
-    // Ticks counting down
-    if (this.state.elapsed == 0) {
-      clearInterval(this.timer);
-    }
-    // When timer reaches 0
+    this.props.timeStore.clearInterval();
   }
 
   render() {
-    // let seconds = Math.round(this.state.elapsed / 100);
-    let seconds = this.props.timeStore.time.countDown;
+    let seconds = this.props.timeStore.countDown;
 
     return (
       <View style={styles.container}>

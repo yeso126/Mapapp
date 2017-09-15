@@ -1,4 +1,4 @@
-import timeStore from './time';
+import timeStore from './timeStore';
 
 const stores = {
   timeStore: new timeStore(),
