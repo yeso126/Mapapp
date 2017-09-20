@@ -10,17 +10,16 @@ import { observer, inject } from 'mobx-react';
 
 const {width, height} = Dimensions.get('window');
 
-@inject('timeStore')
+
+@inject('timeStore', 'scoreStore')
 @observer
 export default class Ball extends Component {
   constructor(props){
     super(props);
     this.state = {
-      animateXY: new Animated.ValueXY({
-        x: 0,
-        y:0,
-      }),
       pressed: false,
+      posX:new Animated.Value(0),
+      posY:new Animated.Value(-10),
     };
   }
 
@@ -30,47 +29,53 @@ export default class Ball extends Component {
 
 
   fall = () => {
-    this.state.animateXY.setValue({
-      x: Math.floor((Math.random() * width) + 1) ,
-      y:0,
-    });
+    this.state.posX.setValue(0);
+    this.state.posY.setValue(-10);
 
-    Animated.timing(this.state.animateXY, {
-      toValue: {
-        x: Math.floor((Math.random() * width) + 1) ,
-        y: height},
-      duration: 1200,
+    Animated.timing(this.state.posX, {
+      toValue: Math.floor((Math.random() * width) + 1),
+      duration: 1000,
       useNativeDriver: true,
-    }).start((animation) => {
-      if (animation.finished) {
-        this.fall();        // Loops animation
-      }
-      if (this.props.timeStore.countDown == 0) {
-        this.state.animateXY.stopAnimation;  // Stops animation
-        console.log('reached 0 ');
-      }
+    }).start();
 
+    Animated.timing(this.state.posY,{
+      toValue:  height,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start((animation) =>{
+      if (animation.finished) {
+        this.fall(); //loops animation
+      }
     });
+
   }
+
+
+
 
   onPressButton () {
     this.setState({
       pressed: true,
     });
+    if (this.state.pressed == false) {
+      this.props.scoreStore.ballPressed();
+    }
   }
 
 
   render() {
+
+    const animatedBall = {
+      backgroundColor: this.props.color,
+      borderColor: this.state.pressed ? 'black' : this.props.color,
+      translateX: this.state.posX,
+      translateY: this.state.posY,
+    };
+
     return (
-      <View style= {styles.container}>
+      <View style= {styles.container} >
         <TouchableWithoutFeedback onPress={this.onPressButton.bind(this)}>
-          <Animated.View style={[styles.balls,{
-            translateY: this.state.animateXY.y,
-            translateX: this.state.animateXY.x,
-            backgroundColor: this.props.color,
-            borderColor: this.state.pressed ? 'black' : this.props.color,
-          }]}
-          />
+          <Animated.View style={[styles.balls, animatedBall]}/>
         </TouchableWithoutFeedback>
       </View>
     );
@@ -95,4 +100,6 @@ Ball.propTypes = {
   color: React.PropTypes.string,
   countDown: React.PropTypes.number,
   timeStore: React.PropTypes.object,
+  ballPressed: React.PropTypes.object,
+  scoreStore: React.PropTypes.object,
 };

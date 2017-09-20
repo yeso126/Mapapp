@@ -37,6 +37,7 @@ export default class Timer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    position: 'absolute',
   },
   text: {
     fontSize: 20,
