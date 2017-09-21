@@ -1,5 +1,3 @@
-/* @flow */
-
 import React, { Component } from 'react';
 import {
   View,
@@ -27,7 +25,7 @@ export default class Timer extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>
-          {seconds}
+          Time:{seconds}
         </Text>
       </View>
     );
@@ -37,7 +35,7 @@ export default class Timer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position: 'absolute',
+    // position: 'absolute',
   },
   text: {
     fontSize: 20,

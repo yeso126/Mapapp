@@ -31,6 +31,7 @@ export default class Ball extends Component {
   fall = () => {
     this.state.posX.setValue(0);
     this.state.posY.setValue(-10);
+    // resetsPositions when animation Loops
 
     Animated.timing(this.state.posX, {
       toValue: Math.floor((Math.random() * width) + 1),
@@ -48,18 +49,38 @@ export default class Ball extends Component {
       }
     });
 
+    if (this.props.timeStore.countDown == 0) {
+      Animated.timing(
+        this.state.posY
+      ).stop();
+      Animated.timing(
+        this.state.posX
+      ).stop();
+    }
+
+    if (this.props.timeStore.gameDone == true) {
+      this.setState({
+        pressed: true,
+      });
+    }
   }
-
-
 
 
   onPressButton () {
     this.setState({
       pressed: true,
     });
+    // Sets state as pressed ... Duh
     if (this.state.pressed == false) {
       this.props.scoreStore.ballPressed();
+      Animated.timing(
+        this.state.posY
+      ).stop();
+      Animated.timing(
+        this.state.posX
+      ).stop();
     }
+    //scoreCounts only when component have not been pressed
   }
 
 

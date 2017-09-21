@@ -11,13 +11,13 @@ import { observer, inject } from 'mobx-react';
 export default class Score extends Component {
 
   componentWillUnmount(){
-    this.props.resetScore();
+    this.props.scoreStore.resetScore();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.props.scoreStore.remainingBalls}</Text>
+        <Text style= {styles.text} >Remaining: {this.props.scoreStore.remainingBalls}</Text>
       </View>
     );
   }
@@ -25,7 +25,11 @@ export default class Score extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    // position: 'absolute',
+
+  },
+  text:{
+    fontSize: 20,
   },
 });
 

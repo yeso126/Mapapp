@@ -1,9 +1,10 @@
 import { observable } from 'mobx';
-
+import {Alert} from 'react-native';
 
 export default class time {
 
   @observable countDown = 20
+  @observable gameDone = false
 
   timeInterval(){
     this.timer = setInterval(this.tickInterval.bind(this), 1000);
@@ -14,11 +15,18 @@ export default class time {
     // Ticks counting down
     if (this.countDown == 0) {
       clearInterval(this.timer);
+      Alert.alert(
+        'You lost',
+        'You just got Rekt',
+        [
+          {text: 'Keep playing', onPress: () => console.log('rekt')},
+        ]);
+      this.gameDone = true;
     }
-    // When timer reaches 0
   }
   resetInterval(){
     this.countDown = 20;
     clearInterval(this.timer);
   }
+
 }
