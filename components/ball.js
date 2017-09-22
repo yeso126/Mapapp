@@ -19,7 +19,7 @@ export default class Ball extends Component {
     this.state = {
       pressed: false,
       posX:new Animated.Value(0),
-      posY:new Animated.Value(-10),
+      posY:new Animated.Value(-100),
     };
   }
 
@@ -27,10 +27,16 @@ export default class Ball extends Component {
     this.fall();
   }
 
+  componentWillUnmount () {
+    this.setState({
+      pressed: false,
+    });
+    this.props.timeStore.gameDone = false;
+  }
 
   fall = () => {
     this.state.posX.setValue(0);
-    this.state.posY.setValue(-10);
+    this.state.posY.setValue(-100);
     // resetsPositions when animation Loops
 
     Animated.timing(this.state.posX, {
