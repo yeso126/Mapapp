@@ -7,12 +7,12 @@ import {
 import { observer, inject } from 'mobx-react';
 const {width, height} = Dimensions.get('window');
 
-
-import Ball from '../components/ball';
+import BallDownTop from '../components/ballDownTop';
+import BallTopDown from '../components/ballTopDown';
 import Timer from '../components/timer';
 import Score from '../components/score';
 
-@inject('timeStore')
+@inject('gameStore')
 @observer
 export default class Game extends Component {
   static navigationOptions = {
@@ -28,20 +28,20 @@ export default class Game extends Component {
       <View>
 
         <View style= {[styles.container, {
-          backgroundColor: this.props.timeStore.countDown < 5 ? '#c13434' : '#baffbb',
+          backgroundColor: this.props.gameStore.countDown < 5 ? '#c13434' : '#baffbb',
         }]}
         >
 
-          <Ball color="blue"/>
-          <Ball color="magenta"/>
-          <Ball color="green"/>
-          <Ball color="purple"/>
-          <Ball color="red"/>
-          <Ball color="magenta"/>
-          <Ball color="red"/>
-          <Ball color="green"/>
-          <Ball color="purple"/>
-          <Ball color="magenta"/>
+          <BallTopDown color="blue"/>
+          <BallDownTop color="#ff7300"/>
+          <BallTopDown color="green"/>
+          <BallDownTop color="indigo"/>
+          <BallTopDown color="maroon"/>
+          <BallDownTop color="#780729"/>
+          <BallTopDown color="brown"/>
+          <BallDownTop color="olive"/>
+          <BallTopDown color="purple"/>
+          <BallDownTop color="magenta"/>
 
 
         </View>
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
   container: {
     width: width,
     height: height -50,
+    justifyContent: 'flex-start',
     flexDirection: 'row',
-    justifyContent: 'center',
   },
   scores:{
     flexDirection: 'row',
@@ -74,5 +74,5 @@ const styles = StyleSheet.create({
 
 Game.propTypes = {
   countDown: React.PropTypes.number,
-  timeStore: React.PropTypes.object,
+  gameStore: React.PropTypes.object,
 };

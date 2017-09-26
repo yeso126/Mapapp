@@ -11,15 +11,15 @@ import { observer, inject } from 'mobx-react';
 const {width, height} = Dimensions.get('window');
 
 
-@inject('timeStore', 'scoreStore')
+@inject('gameStore')
 @observer
 export default class Ball extends Component {
   constructor(props){
     super(props);
     this.state = {
       pressed: false,
-      posX:new Animated.Value(0),
-      posY:new Animated.Value(-100),
+      posX:new Animated.Value(Math.floor((Math.random() * width) + -100)),
+      posY:new Animated.Value(height + 100),
     };
   }
 
@@ -31,12 +31,12 @@ export default class Ball extends Component {
     this.setState({
       pressed: false,
     });
-    this.props.timeStore.gameDone = false;
+    this.props.gameStore.gameDone = false;
   }
 
   fall = () => {
-    this.state.posX.setValue(0);
-    this.state.posY.setValue(-100);
+    this.state.posX.setValue(Math.floor((Math.random() * width) + -100));
+    this.state.posY.setValue(height + 100);
     // resetsPositions when animation Loops
 
     Animated.timing(this.state.posX, {
@@ -46,7 +46,7 @@ export default class Ball extends Component {
     }).start();
 
     Animated.timing(this.state.posY,{
-      toValue:  height,
+      toValue:  -100,
       duration: 1000,
       useNativeDriver: true,
     }).start((animation) =>{
@@ -55,7 +55,7 @@ export default class Ball extends Component {
       }
     });
 
-    if (this.props.timeStore.countDown == 0) {
+    if (this.props.gameStore.countDown == 0) {
       Animated.timing(
         this.state.posY
       ).stop();
@@ -64,7 +64,7 @@ export default class Ball extends Component {
       ).stop();
     }
 
-    if (this.props.timeStore.gameDone == true) {
+    if (this.props.gameStore.gameDone == true) {
       this.setState({
         pressed: true,
       });
@@ -78,7 +78,7 @@ export default class Ball extends Component {
     });
     // Sets state as pressed ... Duh
     if (this.state.pressed == false) {
-      this.props.scoreStore.ballPressed();
+      this.props.gameStore.ballPressed();
       Animated.timing(
         this.state.posY
       ).stop();
@@ -112,6 +112,7 @@ export default class Ball extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    position: 'absolute',
   },
   balls: {
     borderRadius: 1000,
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
 Ball.propTypes = {
   color: React.PropTypes.string,
   countDown: React.PropTypes.number,
-  timeStore: React.PropTypes.object,
+  gameStore: React.PropTypes.object,
   ballPressed: React.PropTypes.object,
   scoreStore: React.PropTypes.object,
 };

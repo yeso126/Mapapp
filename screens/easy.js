@@ -4,7 +4,7 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
-import Ball from '../components/ball';
+import Ball from '../components/ballTopDown';
 
 
 export default class Game extends Component {

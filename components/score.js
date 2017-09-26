@@ -6,18 +6,18 @@ import {
 } from 'react-native';
 import { observer, inject } from 'mobx-react';
 
-@inject('scoreStore')
+@inject('gameStore')
 @observer
 export default class Score extends Component {
 
   componentWillUnmount(){
-    this.props.scoreStore.resetScore();
+    this.props.gameStore.resetScore();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style= {styles.text} >Remaining: {this.props.scoreStore.remainingBalls}</Text>
+        <Text style= {styles.text} >Remaining: {this.props.gameStore.remainingBalls}</Text>
       </View>
     );
   }
@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
 
 Score.propTypes = {
   remainingBalls: React.PropTypes.number,
-  scoreStore: React.PropTypes.object,
   resetScore: React.PropTypes.object,
+  gameStore: React.PropTypes.object,
 };

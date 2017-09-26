@@ -7,20 +7,20 @@ import {
 
 import { observer, inject } from 'mobx-react';
 
-@inject('timeStore')
+@inject('gameStore')
 @observer
 export default class Timer extends Component {
 
   componentDidMount(){
-    this.props.timeStore.timeInterval();
+    this.props.gameStore.timeInterval();
   }
 
   componentWillUnmount(){
-    this.props.timeStore.resetInterval();
+    this.props.gameStore.resetInterval();
   }
 
   render() {
-    let seconds = this.props.timeStore.countDown;
+    let seconds = this.props.gameStore.countDown;
 
     return (
       <View style={styles.container}>
@@ -46,5 +46,5 @@ const styles = StyleSheet.create({
 Timer.propTypes = {
   start: React.PropTypes.number,
   countDown: React.PropTypes.number,
-  timeStore: React.PropTypes.object,
+  gameStore: React.PropTypes.object,
 };

@@ -1,9 +1,8 @@
-import timeStore from './timeStore';
-import scoreStore from './scoreStore';
+import gameStore from './gameStore';
+
 
 const stores = {
-  timeStore: new timeStore(),
-  scoreStore: new scoreStore(),
+  gameStore: new gameStore(),
 };
 
 export default stores;
