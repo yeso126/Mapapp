@@ -7,17 +7,16 @@ import { Provider } from 'mobx-react';
 import store from './stores/index';
 
 import InitialScreen from './screens/initialScreen';
-
-import Easy from './screens/easy';
+import HighScores from './screens/highScores';
 import Hard from './screens/hard';
 
 const Routes = StackNavigator({
-  Home:   { screen: InitialScreen },
-  Easy:   { screen: Easy},
-  Hard:   { screen: Hard},
+  Home:       { screen: InitialScreen },
+  Hard:       { screen: Hard},
+  HighScores: { screen: HighScores},
 });
 
-export default class Mapapp extends Component {
+export default class TapCirclesSaga extends Component {
   render() {
     return (
       <Provider {...store}>
@@ -29,4 +28,4 @@ export default class Mapapp extends Component {
 
 
 
-AppRegistry.registerComponent('Mapapp', () => Mapapp);
+AppRegistry.registerComponent('TapCirclesSaga', () => TapCirclesSaga);

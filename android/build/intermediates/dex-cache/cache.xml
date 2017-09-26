@@ -3,12 +3,30 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_f2743f2c5d924b2147a6975d5793ef08db3efd36.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
         <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_24e135b18da05cc6f71d55d9ec353cdb3a6f58cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_0a669dbcf94aedc3c2d42a67c57227f2fc972e08.jar" />
     </item>
     <item
         is-multidex="false"
@@ -21,30 +39,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.0.1\jars\classes.jar"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\libs\infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.0.1_8a08c2a81b2e0ffaf66e66fa1a73671a7977d6b8.jar" />
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_31119bc8327704e384d257d1ed191f1dd2679c31.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.0.1\jars\classes.jar"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.0.1_ec0da1865becae0c84f0a596c35802a008a8f544.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.0.1_18f72ede7fa80ea6b8d770db1aff7812c87e1ed7.jar" />
+        sha1="56d3e81fee5f47a7a12ab65f4620f580c9c71d1e">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.48.4_b0d17cfc50de5d46f0eadf09e0377478e028f463.jar" />
     </item>
     <item
         is-multidex="false"
@@ -75,15 +84,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.47.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="576b5113887747a7592650ae14d980e1c57983c4">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.47.1_5bbb5ef3e4feeebe1f717135f8ee56acc2e96b03.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -99,6 +99,15 @@
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
         <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_740e3f15fd69335d709e2eb6aed2231329d5a89c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_7bfca2745ca81a59d6238d4828e51e49ee07809f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,6 +129,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_4527d7454cf9a16944c8eeb4186dcf197a9e3519.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -129,30 +147,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.47.1\jars\libs\infer-annotations-4.0.jar"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_2a0cfaeb23d9d198954ff7c97b2b0ccd49fa255a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.0.1_096e370891193260f280d2db55c13ef005809a53.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.0.1_5b4d75129797bae8f31de11e13b66de01c9c6a51.jar" />
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_5669497cb2e36bf5f9cd74dce664f62bb198bf5c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -174,12 +174,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.0.1\jars\classes.jar"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.0.1_76ae560099b19798d0d2a5eabdd03d969a6dd2ca.jar" />
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_fb582aa2e4498e7f1c05e6ec1ce4ae00b9ffbdaa.jar" />
     </item>
     <item
         is-multidex="false"

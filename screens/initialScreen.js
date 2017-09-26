@@ -9,12 +9,12 @@ import Logo from '../components/logo';
 
 import { NavigationActions } from 'react-navigation';
 
-const goToEasy = new NavigationActions.navigate({
-  routeName: 'Easy',
-  params: {},
-  action: NavigationActions.navigate({ routeName: 'Easy'}),
-});
 
+const goToHighScores = new NavigationActions.navigate({
+  routeName: 'HighScores',
+  params: {},
+  action: NavigationActions.navigate({ routeName: 'HighScores'}),
+});
 
 const goToHard = new NavigationActions.navigate({
   routeName: 'Hard',
@@ -25,16 +25,16 @@ const goToHard = new NavigationActions.navigate({
 
 export default class InitialScreen extends Component {
     static navigationOptions = {
-      title: 'JS powered Native Game',
+      title: 'Tap Circles Saga',
       headerTintColor: '#e78e18',
     };
 
 
-    goToEasy = () =>{
-      this.props.navigation.dispatch(goToEasy);
-    }
     goToHard = () =>{
       this.props.navigation.dispatch(goToHard);
+    }
+    goToHighScores = () =>{
+      this.props.navigation.dispatch(goToHighScores);
     }
 
 
@@ -45,11 +45,13 @@ export default class InitialScreen extends Component {
           <Logo style={styles.logo}/>
           <View style={styles.buttonContainer}>
 
-            <Button title="easy"
-              onPress={this.goToEasy}
-            />
-            <Button title="Hard"
+            <Button title="Start Game"
               onPress={this.goToHard}
+            />
+
+
+            <Button title="HighScores"
+              onPress={this.goToHighScores}
             />
 
           </View>

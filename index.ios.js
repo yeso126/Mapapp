@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class Mapapp extends Component {
+export default class TapCirclesSaga extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Mapapp', () => Mapapp);
+AppRegistry.registerComponent('TapCirclesSaga', () => TapCirclesSaga);

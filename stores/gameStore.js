@@ -3,8 +3,9 @@ import {Alert} from 'react-native';
 
 export default class time {
 
-  @observable countDown = 60
+  @observable countDown = 20
   @observable gameDone = false
+  @observable remainingBalls = 10
 
   timeInterval(){
     this.timer = setInterval(this.tickInterval.bind(this), 1000);
@@ -25,11 +26,10 @@ export default class time {
     }
   }
   resetInterval(){
-    this.countDown = 60;
+    this.countDown = 20;
     clearInterval(this.timer);
   }
 
-  @observable remainingBalls = 10
 
   ballPressed(){
     this.remainingBalls --;

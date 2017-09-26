@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\redbox_view.xml",
-        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\layout\\redbox_view.xml"
+        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.48.4\\res\\layout\\redbox_view.xml"
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
@@ -25,7 +25,7 @@
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\redbox_item_title.xml",
-        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\layout\\redbox_item_title.xml"
+        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.48.4\\res\\layout\\redbox_item_title.xml"
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\redbox_item_frame.xml",
-        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\layout\\redbox_item_frame.xml"
+        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.48.4\\res\\layout\\redbox_item_frame.xml"
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
@@ -145,7 +145,7 @@
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dev_loading_view.xml",
-        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\layout\\dev_loading_view.xml"
+        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.48.4\\res\\layout\\dev_loading_view.xml"
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fps_view.xml",
-        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.47.1\\res\\layout\\fps_view.xml"
+        "source": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\exploded-aar\\com.facebook.react\\react-native\\0.48.4\\res\\layout\\fps_view.xml"
     },
     {
         "merged": "C:\\Users\\yeso1\\Documents\\Development\\Mapapp\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
