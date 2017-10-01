@@ -1,11 +1,12 @@
 import { observable } from 'mobx';
-import {Alert} from 'react-native';
+import {Alert, AsyncStorage} from 'react-native';
 
-export default class time {
+export default class game {
 
-  @observable countDown = 20
-  @observable gameDone = false
-  @observable remainingBalls = 10
+  @observable countDown = 20;
+  @observable gameDone = false;
+  @observable remainingBalls = 10;
+
 
   timeInterval(){
     this.timer = setInterval(this.tickInterval.bind(this), 1000);
@@ -22,14 +23,15 @@ export default class time {
         [
           {text: 'Keep playing', onPress: () => console.log('rekt')},
         ]);
-      this.gameDone = true;
+      this.gameDone= true;
+      AsyncStorage.setItem('bestTime', JSON.stringify(this.countDown));
     }
   }
+
   resetInterval(){
     this.countDown = 20;
     clearInterval(this.timer);
   }
-
 
   ballPressed(){
     this.remainingBalls --;
@@ -42,6 +44,8 @@ export default class time {
           {text: 'Keep playing', onPress: () =>console.log('you win')},
         ]);
       clearInterval(this.timer);
+      AsyncStorage.setItem('bestTime',JSON.stringify(this.countDown) );
+      AsyncStorage.setItem('score', JSON.stringify(this.remainingBalls));
     }
   }
 
