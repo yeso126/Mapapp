@@ -3,12 +3,13 @@ import {
   StyleSheet,
   View,
   Button,
+  Text,
 } from 'react-native';
 
 import Logo from '../components/logo';
 
 import { NavigationActions } from 'react-navigation';
-
+import { observer, inject } from 'mobx-react';
 
 const goToHighScores = new NavigationActions.navigate({
   routeName: 'HighScores',
@@ -17,18 +18,22 @@ const goToHighScores = new NavigationActions.navigate({
 });
 
 const goToHard = new NavigationActions.navigate({
-  routeName: 'Hard',
+  routeName:  'Hard',
   params: {},
   action: NavigationActions.navigate({ routeName: 'Hard'}),
 });
 
-
+@inject('scoreStore')
+@observer
 export default class InitialScreen extends Component {
     static navigationOptions = {
       title: 'Tap Circles Saga',
       headerTintColor: '#e78e18',
     };
 
+    componentWillMount(){
+      this.props.scoreStore.getScore();
+    }
 
     goToHard = () =>{
       this.props.navigation.dispatch(goToHard);
@@ -36,6 +41,8 @@ export default class InitialScreen extends Component {
     goToHighScores = () =>{
       this.props.navigation.dispatch(goToHighScores);
     }
+
+
 
 
     render() {
@@ -50,9 +57,11 @@ export default class InitialScreen extends Component {
             />
 
 
-            <Button title="HighScores"
-              onPress={this.goToHighScores}
-            />
+
+            <Text>
+              your best time is {this.props.scoreStore.bestTime}s left
+            </Text>
+
 
           </View>
 
@@ -66,7 +75,7 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: '#002637',
+    backgroundColor: '#62eb04',
   },
 
   buttonContainer: {

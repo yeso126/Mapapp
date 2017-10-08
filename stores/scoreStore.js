@@ -2,11 +2,18 @@ import { observable } from 'mobx';
 import {AsyncStorage} from 'react-native';
 
 export default class score {
-  @observable highScores= [];
+  @observable bestTime= null;
+  @observable winLost= null;
 
   getScore(){
-    AsyncStorage.getItem('bestTime').then((value)=> console.log(value));
-    AsyncStorage.getItem('score').then((value)=> console.log(value));
+    AsyncStorage.getItem('bestTime').then((value)=>{
+      console.log(value);
+      return this.bestTime= value;
+    });
+    AsyncStorage.getItem('winLost').then((value)=> {
+      console.log(value);
+      return this.winLost= value;
+    });
   }
 
 }

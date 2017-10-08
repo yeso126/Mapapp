@@ -24,7 +24,6 @@ export default class game {
           {text: 'Keep playing', onPress: () => console.log('rekt')},
         ]);
       this.gameDone= true;
-      AsyncStorage.setItem('bestTime', JSON.stringify(this.countDown));
     }
   }
 
@@ -45,7 +44,7 @@ export default class game {
         ]);
       clearInterval(this.timer);
       AsyncStorage.setItem('bestTime',JSON.stringify(this.countDown) );
-      AsyncStorage.setItem('score', JSON.stringify(this.remainingBalls));
+      AsyncStorage.setItem('winLost', 'Git gud son');
     }
   }
 
