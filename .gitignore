@@ -47,3 +47,6 @@ jspm_packages
 .yarn-integrity
 
 Mappapp/
+android/app/my-release-key.keystore
+android/gradle.properties
+android/app/build

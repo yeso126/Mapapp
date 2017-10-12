@@ -16,8 +16,6 @@ import Score from '../components/score';
 @observer
 export default class Game extends Component {
   static navigationOptions = {
-    // title: 'Hard',
-    // headerTintColor: 'rgb(231, 142, 24)',
     header: null,
   };
 
@@ -28,20 +26,21 @@ export default class Game extends Component {
       <View>
 
         <View style= {[styles.container, {
-          backgroundColor: this.props.gameStore.countDown < 5 ? '#c13434' : '#baffbb',
+          backgroundColor: this.props.gameStore.countDown < 5 ? '#c13434' : '#f0f8ea',
         }]}
         >
 
-          <BallTopDown color="blue"/>
-          <BallDownTop color="#ff7300"/>
-          <BallTopDown color="green"/>
-          <BallDownTop color="indigo"/>
-          <BallTopDown color="maroon"/>
+          <BallTopDown color="#ff7900"/>
+          <BallDownTop color="#00cb53"/>
+          <BallTopDown color="#389dc3"/>
+          <BallDownTop color="#fc4040"/>
+          <BallDownTop color="#ffa800"/>
           <BallDownTop color="#780729"/>
-          <BallTopDown color="brown"/>
-          <BallDownTop color="olive"/>
-          <BallTopDown color="purple"/>
-          <BallDownTop color="magenta"/>
+          <BallTopDown color="#ff00a1"/>
+          <BallDownTop color="#2238fc"/>
+          <BallTopDown color="#b86f9e"/>
+          <BallTopDown color="#ff0000"/>
+
 
 
         </View>
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingRight: 20,
     justifyContent: 'space-around',
-    backgroundColor: 'white',
+    backgroundColor: '#e4572e',
   },
 });
 

@@ -6,6 +6,7 @@ import {
   Text,
 } from 'react-native';
 
+// import sounds from '../sounds/sounds.js';
 import Logo from '../components/logo';
 
 import { NavigationActions } from 'react-navigation';
@@ -23,17 +24,19 @@ const goToHard = new NavigationActions.navigate({
   action: NavigationActions.navigate({ routeName: 'Hard'}),
 });
 
+
 @inject('scoreStore')
 @observer
 export default class InitialScreen extends Component {
-    static navigationOptions = {
-      title: 'Tap Circles Saga',
-      headerTintColor: '#e78e18',
-    };
+  static navigationOptions = {
+    // title: 'Hard',
+    // headerTintColor: 'rgb(231, 142, 24)',
+    header: null,
+  };
 
-    componentWillMount(){
-      this.props.scoreStore.getScore();
-    }
+  componentDidMount(){
+    this.props.scoreStore.getScore();
+  }
 
     goToHard = () =>{
       this.props.navigation.dispatch(goToHard);
@@ -49,19 +52,25 @@ export default class InitialScreen extends Component {
       return (
         <View style={styles.container}>
 
-          <Logo style={styles.logo}/>
+          <View>
+            <Logo style={styles.logo}/>
+
+
+          </View>
+
+
           <View style={styles.buttonContainer}>
 
-            <Button title="Start Game"
+            <Button
+              title="Start Game"
               onPress={this.goToHard}
+              color="#e4572e"
             />
-
-
-
-            <Text>
-              your best time is {this.props.scoreStore.bestTime}s left
-            </Text>
-
+            <View style={styles.button}>
+              <Text style={styles.button_text}>
+                your best time is {this.props.scoreStore.bestTime}s left
+              </Text>
+            </View>
 
           </View>
 
@@ -75,13 +84,24 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: '#62eb04',
+    backgroundColor: '#f0f8ea',
   },
 
   buttonContainer: {
-    alignSelf: 'stretch',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
+  },
+  button:{
+    alignItems:'center',
+    alignSelf:'center',
+    justifyContent: 'center',
+    backgroundColor: '#e4572e',
+    borderWidth: 5,
+    borderColor: '#e4572e',
+  },
+  button_text:{
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   logo:{
     alignSelf: 'center',

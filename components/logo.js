@@ -4,9 +4,10 @@ import {
   View,
   Animated,
   Dimensions,
+  Image,
   TouchableNativeFeedback,
 } from 'react-native';
-
+import logo from '../img/logo.png';
 const {width, height} = Dimensions.get('window');
 
 
@@ -43,25 +44,10 @@ export default class Logo extends Component {
     return (
       <View>
 
-        <TouchableNativeFeedback
-          delayPressIn={1}
-          background={TouchableNativeFeedback.Ripple('#002637')}
-        >
-          <Animated.View style ={[{
-            width: this.state.animate,
-            height: this.state.animate,
-          }, styles.animatedView]}
-          >
-
-            <Animated.Text style ={[{
-              top:this.state.animateXY.y,
-              left: this.state.animateXY.x},
-            styles.animatedText]}
-            >
-            Logo
-            </Animated.Text>
-          </Animated.View>
-        </TouchableNativeFeedback>
+        <Image
+          source={require('../img/logo.png')}
+          style ={styles.animatedView}
+        />
 
 
       </View>
@@ -71,8 +57,8 @@ export default class Logo extends Component {
 
 const styles = StyleSheet.create({
   animatedView: {
-    borderRadius: 1000,
-    backgroundColor: ' rgb(175, 213, 171) ',
+    width:300,
+    height:300,
   },
   animatedText: {
     position: 'absolute',

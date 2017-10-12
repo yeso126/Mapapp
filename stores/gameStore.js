@@ -43,8 +43,13 @@ export default class game {
           {text: 'Keep playing', onPress: () =>console.log('you win')},
         ]);
       clearInterval(this.timer);
-      AsyncStorage.setItem('bestTime',JSON.stringify(this.countDown) );
-      AsyncStorage.setItem('winLost', 'Git gud son');
+      AsyncStorage.getItem('bestTime').then((value)=>{
+        console.log(value);
+        if (value > this.countDown){
+          AsyncStorage.setItem('bestTime',JSON.stringify(this.countDown) );
+        }
+      });
+
     }
   }
 

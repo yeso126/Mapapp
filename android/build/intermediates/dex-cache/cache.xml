@@ -12,12 +12,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\TapCirclesSaga\react-native-sound\unspecified\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_24e135b18da05cc6f71d55d9ec353cdb3a6f58cf.jar" />
+        sha1="7928ca2aee98dbdd5120ff66393d67402b5b719c">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\TapCirclesSaga-react-native-sound-unspecified_6d5a4359719037d5756d94116036da988d352863.jar" />
     </item>
     <item
         is-multidex="false"
@@ -27,24 +27,6 @@
         revision="23.0.1"
         sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
         <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_0a669dbcf94aedc3c2d42a67c57227f2fc972e08.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_7fcdf9cb2c4f586e499435e22e713b5587885e09.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_31119bc8327704e384d257d1ed191f1dd2679c31.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,24 +84,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_7bfca2745ca81a59d6238d4828e51e49ee07809f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_5afa6493c1ced49d615d5891065dd93429382aff.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -156,15 +120,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_fa9d3228841ccb3116393508d17f30b585fa0669.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\Android_SDK\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
         jumboMode="false"
         optimize="true"
@@ -180,6 +135,60 @@
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
         <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_fb582aa2e4498e7f1c05e6ec1ce4ae00b9ffbdaa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_24e135b18da05cc6f71d55d9ec353cdb3a6f58cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_31119bc8327704e384d257d1ed191f1dd2679c31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_7fcdf9cb2c4f586e499435e22e713b5587885e09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_5afa6493c1ced49d615d5891065dd93429382aff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_7bfca2745ca81a59d6238d4828e51e49ee07809f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_fa9d3228841ccb3116393508d17f30b585fa0669.jar" />
     </item>
     <item
         is-multidex="false"
