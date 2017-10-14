@@ -10,10 +10,6 @@ export default class score {
       console.log(value);
       return this.bestTime= value;
     });
-    AsyncStorage.getItem('winLost').then((value)=> {
-      console.log(value);
-      return this.winLost= value;
-    });
   }
 
 }

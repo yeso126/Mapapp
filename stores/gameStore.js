@@ -45,7 +45,7 @@ export default class game {
       clearInterval(this.timer);
       AsyncStorage.getItem('bestTime').then((value)=>{
         console.log(value);
-        if (value > this.countDown){
+        if (value < this.countDown){
           AsyncStorage.setItem('bestTime',JSON.stringify(this.countDown) );
         }
       });

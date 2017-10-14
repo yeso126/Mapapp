@@ -147,21 +147,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\libs\infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_31119bc8327704e384d257d1ed191f1dd2679c31.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\yeso1\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
         <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_7fcdf9cb2c4f586e499435e22e713b5587885e09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.48.4\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\yeso1\Documents\Development\Mapapp\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_31119bc8327704e384d257d1ed191f1dd2679c31.jar" />
     </item>
     <item
         is-multidex="false"
